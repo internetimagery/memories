@@ -1,4 +1,4 @@
-src/*.js
+src/**/*.js
 test/
 
 # Created by https://www.gitignore.io/api/windows,linux,osx,node
