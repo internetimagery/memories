@@ -1,11 +1,7 @@
-# App
-
-# button = require './components/button'
-
 Vue = require 'vue'
+App = require './App.vue'
 
 new Vue {
   el: "#app"
-  data:
-    message: "this"
+  render: (h)-> h App
 }
