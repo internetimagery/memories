@@ -1,15 +1,7 @@
-(function() {
-  var App, Vue;
+import Vue from 'vue'
+import App from './App.vue'
 
-  Vue = require('vue');
-
-  App = require('./App.vue');
-
-  new Vue({
-    el: "#app",
-    render: function(h) {
-      return h(App);
-    }
-  });
-
-}).call(this);
+new Vue({
+  el: '#app',
+  render: h => h(App)
+})
