@@ -15,9 +15,7 @@ module.exports = {
   npm: {
     styles: {
       "flexboxgrid": ["dist/flexboxgrid.css"],
-      "material-design-lite": [
-        "material.css"
-      ],
+      "material-components-web" : ["dist/material-components-web.css"]
     }
   }
 };

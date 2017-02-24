@@ -5,13 +5,13 @@
 window.riot = require 'riot'
 
 # Pull in our components and styles
-require "material-design-lite/material"
+mdc = require "material-components-web/dist/material-components-web"
 
-require "./tags/app-root.tag"
-# require "./tags/test-button.tag"
+# require "./tags/app-root.tag"
+require "./tags/test-button.tag"
 
 # Initialize our app!
-app = riot.mount "#app", "app-root"#, {title: "My Learning Application!"}
+app = riot.mount "#app", "test-button", {mdc: mdc, accent: true}
 
 #
 # sleep = (count)->

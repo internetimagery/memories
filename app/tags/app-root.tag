@@ -1,38 +1,48 @@
 <app-root>
   <!-- Simple header with scrollable tabs. -->
-  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header">
-      <div class="mdl-layout__header-row">
-        <!-- Title -->
-        <span class="mdl-layout-title">{opts.title ? opts.title : "opts.title"}</span>
-      </div>
-      <!-- Tabs -->
-      <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-        <!-- <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Tab 1</a> -->
-        <a each={tab, i in tabs} onclick={tabChange(tab)} href={ "#scroll-tab-" + (i + 1) } class="mdl-layout__tab">{tab.name}</a>
-      </div>
-    </header>
-    <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title">{ opts.title ? opts.title : "opts.title" }</span>
-        <nav class="mdl-navigation">
-          <a each={nav in navs} class="mdl-navigation__link" href={nav.link}>{nav.name}</a>
-        </nav>
-      </div>
+  <header class="mdc-toolbar mdc-toolbar--fixed">
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+      <a class="material-icons">menu</a>
+      <span class="mdc-toolbar__title">Title</span>
+    </section>
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
+      <a class="material-icons" aria-label="Download" alt="Download">file_download</a>
+      <a class="material-icons" aria-label="Print this page" alt="Print this page">print</a>
+      <a class="material-icons" aria-label="Bookmark this page" alt="Bookmark this page">bookmark</a>
+    </section>
+  </header>
+  <main>
+
+    <div class="mdc-toolbar-fixed-adjust">
+      <p class="demo-paragraph">
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.
+      </p>
+      <p class="demo-paragraph">
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.
+      </p>
     </div>
-    <main class="mdl-layout__content">
-      <section each={tab, i in tabs} class="mdl-layout__tab-panel is-active" id={ "scroll-tab-" + (1 + i) }>
-        <div class="page-content">
-          {tab.content}
-        </div>
-      </section>
-    </main>
-  </div>
+  </main>
 
   <script type="text/coffee">
-    @tabChange = (tab)->
-      (e)->
-        console.log "Tab clicked", tab, e
-    @tabs = ({name: "Tab #{t}", content: "Stuff #{t}"} for t in [0...4])
-    @navs = ({link: "#", name: "Link #{l}"} for l in [0 ... 10])
+    # Set up our tabs!
+    # @tabs = {
+    #   view_list:
+    #     active: true
+    #     content: "Some content here"
+    #     clicked: (e)=>
+    #       @refs.content.innerHTML = "List!"
+    #   view_module:
+    #     active: false
+    #     content: "Some content here"
+    #     clicked: (e)=>
+    #       @refs.content.innerHTML = "Grid!"
+    #   view_carousel:
+    #     active: false
+    #     content: "Some content here"
+    #     clicked: (e)=>
+    #       @refs.content.innerHTML = "Flip through!"
+    # }
+    # @on "mount", @tabs.view_list.clicked
+
   </script>
 </app-root>
