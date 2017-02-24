@@ -11,5 +11,12 @@ module.exports = {
   plugins: {
     on: ["riot"],
     riot: {}
+  },
+  npm: {
+    styles: {
+      "material-design-lite": [
+        "material.css"
+      ]
+    }
   }
 };
