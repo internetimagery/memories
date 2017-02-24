@@ -7,14 +7,17 @@
 # Pull in our components and styles
 require "material-design-lite/material"
 
-require "./tags/test-button.tag"
+require "./tags/app-root.tag"
+# require "./tags/test-button.tag"
 
-app = riot.mount "#app", "test-button", {name: "The Button"}
+# Initialize our app!
+app = riot.mount "#app", "app-root"
 
-sleep = (count)->
-  setTimeout ->
-    # app[0].add count
-    if count
-      sleep count -= 1
-  , 400
-sleep 10
+#
+# sleep = (count)->
+#   setTimeout ->
+#     # app[0].add count
+#     if count
+#       sleep count -= 1
+#   , 400
+# sleep 10

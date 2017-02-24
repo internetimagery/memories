@@ -14,7 +14,7 @@ module.exports = {
   },
   npm: {
     styles: {
-      "skeleton-css": ["css/normalize.css", "css/skeleton.css"],
+      "flexboxgrid": ["dist/flexboxgrid.css"],
       "material-design-lite": [
         "material.css"
       ],
