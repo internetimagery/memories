@@ -9,7 +9,7 @@ require "material-design-lite/material"
 
 require "./tags/test-button.tag"
 
-app = riot.mount "#app", "test-button"
+app = riot.mount "#app", "test-button", {name: "The Button"}
 
 sleep = (count)->
   setTimeout ->
