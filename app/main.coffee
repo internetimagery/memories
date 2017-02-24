@@ -2,7 +2,7 @@
 
 
 # Make riot global, to allow compiled tags to see it
-@riot = require 'riot'
+window.riot = require 'riot'
 
 # Pull in our components and styles
 require "material-design-lite/material"
@@ -11,7 +11,7 @@ require "./tags/app-root.tag"
 # require "./tags/test-button.tag"
 
 # Initialize our app!
-app = riot.mount "#app", "app-root"
+app = riot.mount "#app", "app-root"#, {title: "My Learning Application!"}
 
 #
 # sleep = (count)->
