@@ -18,3 +18,4 @@ Module | Docs
 brunch | http://brunch.io
 riot   | http://riotjs.com
 material-design-lite | https://getmdl.io
+flexboxgrid | http://flexboxgrid.com

@@ -14,9 +14,10 @@ module.exports = {
   },
   npm: {
     styles: {
+      "skeleton-css": ["css/normalize.css", "css/skeleton.css"],
       "material-design-lite": [
         "material.css"
-      ]
+      ],
     }
   }
 };
