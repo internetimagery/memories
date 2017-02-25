@@ -10,7 +10,9 @@ module.exports = {
   },
   plugins: {
     on: ["riot"],
-    riot: {}
+    riot: {
+      modular: true
+    }
   },
   npm: {
     styles: {

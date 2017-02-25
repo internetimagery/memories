@@ -1,12 +1,12 @@
 # Main app! Lets go!
 
 
-# Make riot global, to allow compiled tags to see it
+# Make riot and mdc global, to allow compiled tags to see them
 window.riot = require 'riot'
+window.mdc = require "material-components-web/dist/material-components-web"
 
-# Pull in our components and styles
-mdc = require "material-components-web/dist/material-components-web"
-
+require "./tags/mdc/mdc-button.tag"
+require "./tags/mdc/mdc-icon.tag"
 # require "./tags/app-root.tag"
 require "./tags/test-button.tag"
 
