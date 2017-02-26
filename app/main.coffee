@@ -5,13 +5,15 @@
 window.riot = require 'riot'
 window.mdc = require "material-components-web/dist/material-components-web"
 
-require "./tags/mdc/mdc-button.tag"
-require "./tags/mdc/mdc-icon.tag"
-# require "./tags/app-root.tag"
-require "./tags/test-button.tag"
+# pull in our mdc's!
+require './tags/mdc/mdc-core'
+
+# Pull in our app tags.
+require "./tags/app-core.tag"
+
 
 # Initialize our app!
-app = riot.mount "#app", "test-button", {mdc: mdc, accent: true}
+app = riot.mount "#app", "app-core"
 
 #
 # sleep = (count)->
