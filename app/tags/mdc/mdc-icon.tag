@@ -10,8 +10,8 @@
       when opts.size <= 36 then "md-36"
       when opts.size <= 48 then "md-48"
     style.push "md-inactive" if opts.inactive
-    style.push "md-light" if opts.light
-    style.push "md-dark" if opts.dark
+    console.log opts
+    style.push if opts.tint == "dark" then "md-dark" else "md-light"
     @style = style.join " "
 
   </script>
