@@ -11,14 +11,18 @@ class Controller
 
   # Handle events
   handler: (event, args...)=>
-    switch event
-      # Requesting a change of display type
-      when "view_request" then @view_request args...
+    @[event] args... if @[event]?
 
   view_request: (view)->
     if view != @view_state
       @view_state = view
       console.log "Switching view", view
       @trigger "view_change", view
+
+  upload_request: ->
+    console.log "upload browse window requested"
+    # fileDialog {multiple: true}
+    # .then (file)->
+    #   console.log "File", file
 
 module.exports = Controller
