@@ -1,14 +1,17 @@
 # Main app! Lets go!
 
+Controller = require './controller'
 
 # Make riot and mdc global, to allow compiled tags to see them
 window.riot = require 'riot'
 window.mdc = require "material-components-web/dist/material-components-web"
+window.ctrl = new Controller()
 
 # pull in our mdc's!
 require './tags/mdc/mdc-core'
 
 # Pull in our app tags.
+require "./tags/app-toolbar.tag"
 require "./tags/app-core.tag"
 
 

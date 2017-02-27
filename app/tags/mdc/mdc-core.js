@@ -2,4 +2,5 @@
 
 require('./mdc-icon.tag');
 require('./mdc-button.tag');
-require("./mdc-toolbar.tag")
+require("./mdc-toolbar.tag");
+require("./mdc-content.tag");
