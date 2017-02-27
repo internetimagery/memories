@@ -21,8 +21,6 @@ class Controller
 
   upload_request: ->
     console.log "upload browse window requested"
-    # fileDialog {multiple: true}
-    # .then (file)->
-    #   console.log "File", file
+
 
 module.exports = Controller
