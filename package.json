@@ -7,9 +7,9 @@
   "repository": "",
   "main": "app/main.js",
   "scripts": {
-    "start": "npm run tags && electron .",
-    "build": "brunch build --production",
-    "tags": "riot -m app/tags public/tags.js"
+    "page": "gulp page",
+    "start": "",
+    "build": ""
   },
   "dependencies": {
     "material-components-web": "^0.5.0",

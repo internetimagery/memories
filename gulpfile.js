@@ -20,7 +20,7 @@
   });
 
   gulp.task("assets", function() {
-    return gulp.src("src/assets").pipe(gulp.dest("dist"));
+    return gulp.src("src/assets/*").pipe(gulp.dest("dist"));
   });
 
   gulp.task("css", function() {
@@ -30,5 +30,7 @@
   gulp.task("js", ["coffee", "tags"], function() {
     return gulp.src("src/main.js").pipe(bro()).pipe(gulp.dest("dist"));
   });
+
+  gulp.task("page", ["css", "assets", "js"]);
 
 }).call(this);

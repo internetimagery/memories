@@ -1,21 +1,13 @@
 
-# Run
+# Commands
 
-* To start the local server for testing
-
-```
-npm start
-```
-
-* To build for production
+Compile the page
 
 ```
-npm run build
+npm run page
 ```
 
 Module | Docs
 ------ | ----
-brunch | http://brunch.io
 riot   | http://riotjs.com
 material-design-lite | https://getmdl.io
-flexboxgrid | http://flexboxgrid.com

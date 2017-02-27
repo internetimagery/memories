@@ -18,7 +18,7 @@ gulp.task "tags", (done)->
 
 # Copy across assets
 gulp.task "assets", ->
-  gulp.src "src/assets"
+  gulp.src "src/assets/*"
   .pipe gulp.dest "dist"
 
 # Combine all our css
@@ -30,8 +30,11 @@ gulp.task "css", ->
   .pipe css("bundle.css")
   .pipe gulp.dest "dist"
 
-# Combine all our js!
+# Combine all our js, including tag conversion.
 gulp.task "js", ["coffee", "tags"], ->
   gulp.src "src/main.js"
   .pipe bro()
   .pipe gulp.dest "dist"
+
+# Put together all page related things. Shortcut.
+gulp.task "page", ["css", "assets", "js"]
