@@ -1,17 +1,18 @@
 {
-  "name": "brunch-app",
-  "description": "Brunch.io application",
+  "name": "memories",
+  "description": "",
   "private": true,
-  "author": "Brunch",
+  "author": "Jason Dixon",
   "version": "0.0.1",
   "repository": "",
-  "main": "app/main.js",
+  "main": "start.js",
   "scripts": {
     "page": "gulp page",
-    "start": "",
+    "start": "npm run page && electron .",
     "build": ""
   },
   "dependencies": {
+    "electron-window": "^0.8.1",
     "material-components-web": "^0.5.0",
     "riot": "^3.3.1"
   },
