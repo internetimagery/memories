@@ -2,8 +2,8 @@
 
 riot = require 'riot'
 
-Controller = require './controller'
-tags = require './tags/tags'
+Controller = require './dist/controller'
+tags = require './dist/tags/tags'
 
 # Make mdc and our controller global.
 window.mdc = require "material-components-web/dist/material-components-web"

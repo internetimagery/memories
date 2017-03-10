@@ -3,7 +3,6 @@
 gulp = require 'gulp'
 coffee = require 'gulp-coffee'
 css = require 'gulp-concat-css'
-bro = require 'gulp-bro'
 child_process = require 'child_process'
 
 # Lets convert our awesome-script!
@@ -32,8 +31,7 @@ gulp.task "css", ->
 
 # Combine all our js, including tag conversion.
 gulp.task "js", ["coffee", "tags"], ->
-  gulp.src "src/main.js"
-  .pipe bro()
+  gulp.src "src/**/*.js"
   .pipe gulp.dest "dist"
 
 # Put together all page related things. Shortcut.

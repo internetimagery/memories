@@ -1,13 +1,11 @@
 (function() {
-  var bro, child_process, coffee, css, gulp;
+  var child_process, coffee, css, gulp;
 
   gulp = require('gulp');
 
   coffee = require('gulp-coffee');
 
   css = require('gulp-concat-css');
-
-  bro = require('gulp-bro');
 
   child_process = require('child_process');
 
@@ -28,7 +26,7 @@
   });
 
   gulp.task("js", ["coffee", "tags"], function() {
-    return gulp.src("src/main.js").pipe(bro()).pipe(gulp.dest("dist"));
+    return gulp.src("src/**/*.js").pipe(gulp.dest("dist"));
   });
 
   gulp.task("page", ["css", "assets", "js"]);
