@@ -10,10 +10,10 @@ electron.app.on "ready", ()->
   electron.app.on "browser-window-created", (err, win)->
       win.setMenu null if not dev
   mainWindow = window.createWindow
-    width: 600
-    height: 400
+    width: 800
+    height: 600
     # frame: false
-  indexPath = "dist/index.html" #path.resolve __dirname, "index.html"
+  indexPath = "index.html" #path.resolve __dirname, "index.html"
 
   mainWindow.showUrl indexPath, ()->
     console.log "Window up and running!"
@@ -22,6 +22,9 @@ electron.app.on "ready", ()->
 
 # Ensure process ends when closed
 process.on "exit", ->
-  process.stdout.write "Process Closed"
-  # @.proc.disconnect()
-  @.proc.kill()
+  try
+    @.proc.disconnect()
+    @.proc.kill()
+    process.stdout.write "Process Closed"
+  catch error
+    process.stdout.write "Process Not Autoclosed."

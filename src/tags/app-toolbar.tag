@@ -18,7 +18,7 @@
 
   <script type="text/coffee">
     @upload_request = (e)->
-      ctrl.trigger "upload_request"
+      ctrl.trigger "upload_browser_request"
     @view_request = (view)-> (e)->
       ctrl.trigger "view_request", view
   </script>
